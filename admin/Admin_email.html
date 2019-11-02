@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Send Emails</title>
+ <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favi.ico">
+ <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body class="flx-col">
+ <header class="flx-col">
+  <div id="a1" class="flx-row sp-btw wht">
+   <p id="name">Admin - John Doe</p>
+   <button class="btn1 wht">Sign out</button>
+  </div>
+   <div id="a2" class="flx-row">
+    <ul class="flx-row blk sp-ar">
+      <li class="flx-row">
+        <a class="flx-row al-cnt" href="./Admin_volunteers.html"><img src="./assets/images/manage.png" alt="" srcset=""> Manage Volunteers</a>
+       </li>
+       <li class="flx-row">
+         <a class="flx-row al-cnt" href="./Admin_blog.html"><img src="./assets/images/blog.png" alt="" srcset=""> Manage Blog</a>
+        </li>
+        <li class="flx-row">
+          <a class="flx-row al-cnt" href="./Admin_announcements.html"><img src="./assets/images/news.jpg" alt="" srcset=""> Manage Anouncements</a>
+         </li>
+         <li class="flx-row">
+           <a class="flx-row al-cnt" href="./Admin_email.html"><img src="./assets/images/email.png" alt="" srcset=""> Emaill Volunteers</a>
+          </li>
+    </ul>
+   </div>
+ </header>
+ <div id="u1" class="flx-col"> 
+   <h1 style="align-self: center; color: #215323; font-weight: lighter; margin: 0; margin-top: 1em;">Email Volunteers</h1>
+  <div id="vManage" style="width: 50%" class="state flx-row scroll-down">
+    <div id="vSearch" class="flx-col  scroll-down" style="flex: 0.5">     
+      <div id="age" >
+      <label>Ages between <br> <input type="number" min="1" id="minAge"> to <input id="maxAge" type="number" min="1"></label>
+      </label>      
+     </div> 
+         <div class="full"></div>
+         <select id="selectState">
+            <option>Select state</option>
+            <option>Abuja</option>
+            <option>Abia</option>
+            <option>Adamawa</option>
+            <option>Akwa Ibom</option>
+            <option>Anambra</option>
+            <option>Bauchi</option>
+            <option>Bayelsa</option>
+            <option>Benue</option>
+            <option>Borno</option>
+            <option>Cross River</option>
+            <option>Delta</option>
+            <option>Ebonyi</option>
+            <option>Enugu</option>
+            <option>Edo</option>
+            <option>Ekiti</option>
+            <option>Gombe</option>
+            <option>Imo</option>
+            <option>Jigawa</option>
+            <option>Kaduna</option>
+            <option>Kano</option>
+            <option>Katsina</option>
+            <option>Kebbi</option>
+            <option>Kogi</option>
+            <option>Kwara</option>
+            <option>Lagos</option>
+            <option>Nasarawa</option>
+            <option>Niger</option>
+            <option>Ogun</option>
+            <option>Ondo</option>
+            <option>Osun</option>
+            <option>Oyo</option>
+            <option>Plateau</option>
+            <option>Rivers</option>
+            <option>Sokoto</option>
+            <option>Taraba</option>
+            <option>Yobe</option>
+            <option>Zamfara</option>
+          </select>
+      <button id="vSearchBtn" class="btn1">Filter</button>
+      <span id="total">Total result: 1</span>    
+    </div>   
+           <div id="vEmail" class="flx-col al-st">
+           <h2>Email Volunteer</h2>
+           <label>
+            Subject <br>
+            <input type="text" name="" id="subject">
+           </label>
+           <textarea id="vMessage"  class="full"></textarea>
+           <button id="sendEm" class="btn1">SEND</button>
+    </div>
+  </div>
+ </div>
+  <footer class="flx-col al-cnt sp-ar">  
+    <div class="flx-row wrp sp-ar .flx-st; full">
+      <img src="./assets/images/logo 2.jpg" alt="">  
+      <address>
+        <p><b>Address</b>
+        </p>
+        Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. Vitae porro <br> accusantium delectus ipsam explicabo <br> laboriosam architecto neque animi 
+       </address>
+       <ul>
+      <div class="flx-row wrp">
+        <div class="flx-col">
+          <li class="flx-row al-cnt sp-ar"><img src="./assets/images/twitter.png" alt=""> @lorem</li>
+          <li class="flx-row al-cnt sp-ar"><img src="./assets/images/insta.png" alt=""> @lorem</li>
+        </div>
+        <div class="flx-col">
+          <li class="flx-row al-cnt sp-ar"><img src="./assets/images/email.png" alt="">lorem@ipsum.com</li>
+          <li class="flx-row al-cnt sp-ar"><img src="./assets/images/tel.png" alt=""> +234 XX XXXX XXXX</li>
+        </div>
+      </div>
+       </ul>
+    </div>
+    <p style="align-self: flex-start;">&copy; Volunteers HUB AFRICA 2019</p>
+   </footer>
+   <script src="./assets/http.js"></script>
+   <script>
+     const http = new  COM  
+    
+     document.getElementById("sendEm").addEventListener("click", function(){
+      var Data = function(){
+       this.title = "SendBulkEmail"
+       this.body = document.getElementById("vMessage").value
+       this.subject = document.getElementById("subject").value
+       this.minAge = document.getElementById("minAge").value
+       this.minAge = document.getElementById("maxAge").value
+       this.withinState = document.getElementById("selectState").value
+     }
+
+     const ip = "http://192.168.0.3/Volunteers-Hub-Africa/Api/web.php"
+"http://192.168.0.3/Volunteers-Hub-Africa/Api/web.php"
+
+     http.post(ip,  JSON.stringify(new Data()) , function(err, res){
+      console.log(res)
+    } )
+     })
+
+    document.getElementById("vSearchBtn").addEventListener("click", function(){
+      var Data = function(){
+        this.title = "GetCountOf"
+        this.minAge = document.getElementById("minAge").value
+       this.minAge = document.getElementById("maxAge").value
+       this.withinState = document.getElementById("selectState").value
+      }
+
+      http.post(ip,  JSON.stringify(new Data()) , function(err, res){
+      console.log(res)
+    } )
+  })
+
+    
+   </script>
+</body>
+</html>

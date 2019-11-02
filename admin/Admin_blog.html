@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Manage Blog</title>
+ <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favi.ico">
+ <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body  class="flx-col">
+  <div id="newB" style="width: 100%;display: none; height: 100%; position: fixed; z-index: 1; background-color: rgba(0, 0, 0, 0.685)">
+  <div style="width: 55%; position: relative; height: 60vh; background-color: white; margin: auto; top: 20vh; padding: 1.4em; font-size: 1.36rem;"  class="flx-row al-st" >
+    <div class="flx-col sp-ar">
+        <label> Title: <br>
+          <input type="text">
+          </label>
+          <label>
+            Content: <br> <textarea style="font-size: 1em; width: 100%;" id="content"> 
+            </textarea>
+          </label>
+          <div class="flx-row"><button class="btn1" id="deleteBlog">Post blog</button>  
+            <button class="btn1" id="closeNewPost" style="background-color: rgb(219, 36, 36)"> Close</button></div>
+    </div>
+    <div class="flx-col" style="margin: 1em">
+        <label > upload main image <br> <input id="mainImage" type="file" accept="image/*" />
+        </label>
+        <label>
+          upload others (3 max) <br>
+          <input  class="subImage" type="file"/>
+          <input  class="subImage" type="file"/>
+          <input  class="subImage" type="file"/>
+        </label>
+    </div>
+  </div>
+  </div>
+ <header class="flx-col">
+  <div id="a1" class="flx-row sp-btw wht">
+   <p id="name">Admin - John Doe</p>
+   <button class="btn1 wht">Sign out</button>
+  </div>
+   <div id="a2" class="flx-row">
+    <ul class="flx-row blk sp-ar">
+      <li class="flx-row">
+        <a class="flx-row al-cnt" href="./Admin_volunteers.html"><img src="./assets/images/manage.png" alt="" srcset=""> Manage Volunteers</a>
+       </li>
+       <li class="flx-row">
+         <a class="flx-row al-cnt" href="./Admin_blog.html"><img src="./assets/images/blog.png" alt="" srcset=""> Manage Blog</a>
+        </li>
+        <li class="flx-row">
+          <a class="flx-row al-cnt" href="./Admin_announcements.html"><img src="./assets/images/news.jpg" alt="" srcset=""> Manage Anouncements</a>
+         </li>
+         <li class="flx-row">
+           <a class="flx-row al-cnt" href="./Admin_email.html"><img src="./assets/images/email.png" alt="" srcset=""> Emaill Volunteers</a>
+          </li>
+    </ul>
+   </div>
+ </header>
+ <div id="u1" class="flx-col"> 
+    <h1 style="align-self: center; color: #215323; font-weight: lighter; margin: 0; margin-top: 1em;">Manage Blog</h1>
+  <div class="state flx-row al-st scroll-down">
+    <div id="blogs" class="scroll-down h100">
+        <button class="btn1" id="createBlog" style="margin-bottom: 0.6em">New Blog</button>
+      <table style="width: 300px;border:none;">
+        <tbody>
+        <tr>
+        <th style="width: 47px;">S/N</th>
+        <th style="width: 204px;">Title</th>
+        <th style="width: 48px;">ID</th>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+        <td style="width: 47px;">&nbsp;1</td>
+        <td style="width: 204px;">&nbsp;Geektutors Wedding</td>
+        <td style="width: 48px;">&nbsp;001</td>
+        </tr>
+        <tr>
+        <td style="width: 47px;">&nbsp;2</td>
+        <td style="width: 204px;">&nbsp;Oyin's Introduction</td>
+        <td style="width: 48px;">&nbsp;002</td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+    <div id="maintain" class="flx-col al-st">
+      <label> Title: <br>
+      <input type="text">
+      </label>
+      <label>
+        Content: <br> <textarea id="content"></textarea>
+      </label>
+      <div class="flx-row"><button class="btn1" id="deleteBlog">Delete Blog</button>
+        <button class="btn1" id="deleteBlog">Edit and save</button></div>    
+      </div>
+      <div id="blogImg" class="flx-col wrp">
+      </div>
+  </div>
+ </div>
+  <footer class="flx-col al-cnt sp-ar">  
+    <div class="flx-row wrp sp-ar .flx-st; full">
+      <img src="./assets/images/logo 2.jpg" alt="">  
+      <address>
+        <p><b>Address</b>
+        </p>
+        Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. Vitae porro <br> accusantium delectus ipsam explicabo <br> laboriosam architecto neque animi 
+       </address>
+       <ul>
+      <div class="flx-row wrp">
+        <div class="flx-col">
+          <li class="flx-row al-cnt sp-ar"><img src="./assets/images/twitter.png" alt=""> @lorem</li>
+          <li class="flx-row al-cnt sp-ar"><img src="./assets/images/insta.png" alt=""> @lorem</li>
+        </div>
+        <div class="flx-col">
+          <li class="flx-row al-cnt sp-ar"><img src="./assets/images/email.png" alt="">lorem@ipsum.com</li>
+          <li class="flx-row al-cnt sp-ar"><img src="./assets/images/tel.png" alt=""> +234 XX XXXX XXXX</li>
+        </div>
+      </div>
+       </ul>
+    </div>
+    <p style="align-self: flex-start;">&copy; Volunteers HUB AFRICA 2019</p>
+   </footer>
+  <script>
+  document.getElementById("createBlog").addEventListener("click", function(e){
+    e.preventDefault()
+    document.getElementById("newB").style.display  = "block"
+  })
+  document.getElementById("closeNewPost").addEventListener("click", function(e){
+    e.preventDefault()
+    e.target.parentElement.parentElement.parentElement.parentElement.style.display = "none"
+  })
+  </script>
+</body>
+</html>

@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    background: #acaaaa;
+    /* padding: 10px; */
+}
+header {
+    padding: 0.5em;
+}
+header li {
+    font-size: 14px;
+}
+#header-logo {
+    padding-left: 1em;
+    width: 120px;
+}
+.flx-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+}
+.header {
+    background-image: url(./doug-linstedt-jEEYZsaxbH4-unsplash.jpg);
+    background-size: cover;
+    background-position: bottom;
+    height: 50vh;
+    clip-path: polygon(0 0, 100% 0, 170vh 100%, 0 60vh);
+    /* padding: 9px;
+    border-radius: 36px; */
+    /* animation-name: moveInTop;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;  */
+    /* transform: translateY(5px); */
+    /* opacity: 0; */
+}
+
+/* .header.fade-in {
+    opacity: 1;
+    transition: all 1s ease-out;
+} */
+ .about {
+    margin-bottom: 30px;
+}
+
+.title-header {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 50px;
+    margin-bottom: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    animation-name: moveInBottom;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; 
+}
+
+.title-header::after {
+    content: '';
+    background: #9cdf9f;
+    height: 5px;
+    width: 30%;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:40px;
+    display: block;
+  
+}
+
+/* .row{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 70px;
+    display: flex;
+    margin-bottom: 10px;
+} */
+
+.row-2 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 30px;
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.col-1-of-3 {
+    width: 250px;   
+    flex: 1;
+    padding: 2px;
+    color: #000;
+    margin-right: 10px;
+    transform: translateY(7px);
+    opacity: 0.1;
+  }
+
+.col-1-of-3.fade-in {
+    opacity: 1;
+    transition: all 1s ease-out;
+}
+
+.col-2-of-3 {
+    width: 400px;   
+    flex: 1;
+    padding: 2px;
+    color: #fff;
+    margin-right: 10px;
+    transform: translateY(7px);
+    opacity: 0;
+  }
+
+.col-2-of-3.fade-in {
+    opacity: 1;
+    transition: 1s;
+    transition: all 1s ease-out;
+}
+
+.col-3-of-3 {
+  width: 250px;   
+  flex: 1;
+  padding: 2px;
+  color: #000;
+  margin-left: 10px;
+  opacity: 0;
+  transform: translateY(7px);
+  display: flex;
+}
+
+.col-3-of-3.fade-in {
+    opacity: 1;
+    transition: all 1s ease-out;
+}
+
+.one {
+    width: 220px;
+    height: 220px;
+    border: 1px solid #9cdf9f;
+    border-radius: 90%;
+    -ms-box-shadow: 0, 15px, 10px rgba(0, 0, 0, 0.8);  
+    box-shadow: 0, 15px, 10px rgba(0, 0, 0, 0.8);   
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    object-fit: cover;
+}
+ 
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); }
+      100% {
+        opacity: 1;
+        transform: translate(0); } 
+    } 
+
+ @keyframes moveInTop {
+    100% {
+        opacity: 1;
+        transform: translateY(0px); }
+    0% {
+        opacity: 0;
+        transform: translate(30px); } 
+    } 
+
+.bus img,.tech img,.fit img{  
+    width: 150px;
+    height: 150px;
+    border: 1px solid #9cdf9f;
+    flex: 1;
+    transition: .3s;
+    object-fit: fill;
+}
+
+.bus img:hover,.tech img:hover,.fit img:hover{
+    transform: translateY(-15px) scale(1.03);
+}
+
+.heading-two {
+    text-transform: uppercase;
+    padding-left: 10px;
+    position: absolute;   
+    top: 2%;
+    letter-spacing: 1.5px;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; 
+}
+
+.para {
+    font-size: 16px;
+    position: absolute;
+    top: 50px;
+    background-color: #50ff9fbd;
+    padding: 10px;
+    width: 350px;
+    border-radius: 36px;
+    border: 1px solid #9cdf9f;
+}
+
+.composition {
+    position: relative;
+    margin-left: 55px;
+    height: 220px;
+  }
+
+.composition__photo {
+    width: 100px;
+    border-radius: 100%;
+    position: absolute;
+    margin-top: 40px;
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 20px;
+}
+.composition__photo--p1{
+    left: 30px;
+    top: -30px;
+}
+.composition__photo--p2{
+    left: 80px;
+    top: 30px;
+}
+.composition__photo--p3{
+    left: 5px;
+    top: 30px;
+}
+
+.composition__photo:hover{
+  transform: scale(1.05) translateX(-5px);
+  z-index: 20;
+}
+.composition:hover .composition__photo:not(:hover){
+   transform: scale(.95)
+}* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    background: #acaaaa;
+    padding: 10px;
+}
+
+.header {
+    background-image: url(doug-linstedt-jEEYZsaxbH4-unsplash.jpg);
+    background-size: cover;
+    background-position: bottom;
+    height: 70vh;
+    /* padding: 9px;
+    border-radius: 36px; */
+    animation-name: moveInTop;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; 
+    /* transform: translateY(5px); */
+    /* opacity: 0; */
+}
+
+/* .header.fade-in {
+    opacity: 1;
+    transition: all 1s ease-out;
+} */
+ .about {
+    margin-bottom: 30px;
+}
+
+.title-header {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 50px;
+    margin-bottom: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    animation-name: moveInBottom;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; 
+}
+
+.title-header::after {
+    content: '';
+    background: #9cdf9f;
+    height: 5px;
+    width: 30%;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:40px;
+    display: block;
+  
+}
+
+/* .row{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 70px;
+    display: flex;
+    margin-bottom: 10px;
+} */
+
+.row-2 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 30px;
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.col-1-of-3 {
+    width: 250px;   
+    flex: 1;
+    padding: 2px;
+    color: #000;
+    margin-right: 10px;
+    transform: translateY(7px);
+    opacity: 0.1;
+  }
+
+.col-1-of-3.fade-in {
+    opacity: 1;
+    transition: all 1s ease-out;
+}
+
+.col-2-of-3 {
+    width: 400px;   
+    flex: 1;
+    padding: 2px;
+    color: #fff;
+    margin-right: 10px;
+    transform: translateY(7px);
+    opacity: 0;
+  }
+
+.col-2-of-3.fade-in {
+    opacity: 1;
+    transition: 1s;
+    transition: all 1s ease-out;
+}
+
+.col-3-of-3 {
+  width: 250px;   
+  flex: 1;
+  padding: 2px;
+  color: #000;
+  margin-left: 10px;
+  opacity: 0;
+  transform: translateY(7px);
+  display: flex;
+}
+
+.col-3-of-3.fade-in {
+    opacity: 1;
+    transition: all 1s ease-out;
+}
+
+.one {
+    width: 220px;
+    height: 220px;
+    border: 1px solid #9cdf9f;
+    border-radius: 90%;
+    -ms-box-shadow: 0, 15px, 10px rgba(0, 0, 0, 0.8);  
+    box-shadow: 0, 15px, 10px rgba(0, 0, 0, 0.8);   
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    object-fit: cover;
+}
+ 
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); }
+      100% {
+        opacity: 1;
+        transform: translate(0); } 
+    } 
+
+ @keyframes moveInTop {
+    100% {
+        opacity: 1;
+        transform: translateY(0px); }
+    0% {
+        opacity: 0;
+        transform: translate(30px); } 
+    } 
+
+.bus img,.tech img,.fit img{  
+    width: 150px;
+    height: 150px;
+    border: 1px solid #9cdf9f;
+    flex: 1;
+    transition: .3s;
+    object-fit: fill;
+}
+
+.bus img:hover,.tech img:hover,.fit img:hover{
+    transform: translateY(-15px) scale(1.03);
+}
+
+.heading-two {
+    text-transform: uppercase;
+    padding-left: 10px;
+    position: absolute;   
+    top: 2%;
+    letter-spacing: 1.5px;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; 
+}
+
+.para {
+    font-size: 16px;
+    position: absolute;
+    top: 50px;
+    background-color: #c7c7c7;
+    padding: 10px;
+    width: 350px;
+    border-radius: 36px;
+    border: 1px solid #9cdf9f;
+}
+
+.composition {
+    position: relative;
+    margin-left: 55px;
+    height: 220px;
+  }
+
+.composition__photo {
+    width: 100px;
+    border-radius: 100%;
+    position: absolute;
+    margin-top: 40px;
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 20px;
+}
+.composition__photo--p1{
+    left: 30px;
+    top: -30px;
+}
+.composition__photo--p2{
+    left: 80px;
+    top: 30px;
+}
+.composition__photo--p3{
+    left: 5px;
+    top: 30px;
+}
+
+.composition__photo:hover{
+  transform: scale(1.05) translateX(-5px);
+  z-index: 20;
+}
+.composition:hover .composition__photo:not(:hover){
+   transform: scale(.95)
+}
